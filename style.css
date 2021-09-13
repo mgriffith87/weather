@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+  display: block;
+}
+
+card-title {
+  font-style: roboto;
+  display: block;
+  text-align: center;
+}
+
+.container {
+  display: block;
+  text-align: center;
+  background: white;
+}
+
+.card {
+  border: 1px solid #fff;
+  height: 500px;
+  width: 500px;
+  padding: 10px 40px 10px 10px;
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+
+.card-body {
+  font-family: Roboto;
+  display: block;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
