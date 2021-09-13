@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelle Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  </head>
+    
+         <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="combined-col">
+                  <div class="col-5">
+                    <div class="row">
+                        <form id="search-form" class="nb-3">
+                        
+                          <div class="row"></div>
+                              <div class="search-form" id="search-form">
+                             <h1>Pollock Pines</h1>
+                             <h2 class="card-title"> Wednesday July 28,2021 </h2>
+                          </p>
+                              <h3>Temperature</h3>
+                                   <p id="show-temperature"> 84°</p>
+                              <div class="col-9">
+                            <input type="search" 
+                            placeholder="enter city here"
+                             id="selector-city"
+                             class="form-control"/>
+                             <div class="form">
+                            <input type="submit" id="search" value="🔍" class="btn btn-primary w-100"/>
+                          </p>
+                      <div class="days">5-Day Forecast</div>
+                    </div>
+                    <br />
+         <div class="row">
+          <div class="day-one">
+            Monday 82°F 
+            🌞
+            </div>
+           </div>
+           <br />
+        <div class="row">
+         <div class="day-two">
+            Tuesday 88°F 
+            🌞
+            </div>
+           </div>
+            <br/>
+        <div class="row">
+         <div class="day-three">
+           Wednesday 88°F 
+           🌞
+           </div>
+          </div>
+            <br />
+           <div class="row">
+          <div class="day-four">
+            Thursday 76°F 
+            ⛅️
+            </div>
+           </div>
+           <br />
+        <div class="row">
+         <div class="day-five">
+            Friday 82°F 
+            🌞
+            </div>
+           </div>
+            <br/>
+            <div>
+            <script src="src/script.js"></script>
+            </div>
+</body>
+</html>
