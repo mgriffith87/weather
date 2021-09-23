@@ -13,65 +13,74 @@
     />
     <link rel="stylesheet" href="src/styles.css" />
     <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
+    <a href="https://www.netlify.com"></a>
 
   </head>
-    
-         <div class="container">
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <div class="combined-col">
-                  <div class="col-5">
-                    <div class="row">
-                        <form id="search-form">
-                        
-                          <div class="row">
-                              <form = class="search-form" id="search-form">
-                             <h1>Pollock Pines</h1>
-                             <h2 class="card-title"> Wednesday July 28,2021 </h2>
-                          </p>
-                              <h3>Temperature</h3>
-                                   <p id="show-temperature"> 84°</p>
+  <body>
+   <div class="container">
+     <div class="weather-app-wrapper">
+       <div class="weather-app">
+         <div class="overview">
+            <h1>
+              Pollock Pines
+            </h1>
+            <ul>
+            <li>
+              Thursday 12:00 
+            </li>
+            <li>
+              Clear
+             </li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <div class="clearfix weather-temp">
+          </div>
+          <div class="float-left">
+            <stron>84</stron>
+            <span class="units">
+               °F
+            </span>
                               
-                            <input type="text" 
-                            placeholder="enter city here"
-                             id="selector-city"
-                             class="form-control"/>
-                             <div class="form">
-                            <input type="submit" id="search" value="🔍" class="mag-glass" />
-                          </p>
-                      <div class="days">5-Day Forecast</div>
-                    </div>
-                    <br />
-         <div class="row">
+              <input type="text" 
+                 placeholder="enter city here"
+                 id="selector-city"
+                class="form-control"/>
+           <div class="form">
+           <input type="submit" id="search" value="🔍" class="mag-glass" />
+            </p>
+            </div>
+            <br />
+         <div class="row-2">
           <div class="day-one">
             Monday 82°F 
             🌞
             </div>
            </div>
            <br />
-        <div class="row">
+        <div class="row-2">
          <div class="day-two">
             Tuesday 88°F 
             🌞
             </div>
            </div>
             <br/>
-        <div class="row">
+        <div class="row-2">
          <div class="day-three">
            Wednesday 88°F 
            🌞
            </div>
           </div>
             <br />
-           <div class="row">
+           <div class="row-2">
           <div class="day-four">
             Thursday 76°F 
             ⛅️
             </div>
            </div>
            <br />
-        <div class="row">
+        <div class="row-2">
          <div class="day-five">
             Friday 82°F 
             🌞
@@ -79,7 +88,133 @@
            </div>
             <br/>
             <div>
+              <small>
+                <a href="https://musing-bardeen-f66909.netlify.app"
+                target="_blank"
+                >Weather code</a> by Michelle Griffith 
+              </small>
+              </div>
             <script src="src/script.js"></script>
             </div>
 </body>
 </html>
+         
+  
+         
+let apiKey="6ed4b8240db798c9a2cc708c63ab3c0c&units=metric";
+
+
+
+
+
+
+function showTemperature(response) {
+  let temperature= Math.round(response.data.main.temp);
+  let temperatureElement=document.querySelector("#temperature");
+  let description=document.querySelector("#temperature-description");
+  temperatureElement.innerHTML='${temperature}°F';
+  description.innerHTML=response.data.weather[0].description;
+}
+let h2= document.querySelector("#city");
+h1.innerHTML= city;
+
+axios.get(apiUrl).then(showTemperature);
+
+
+function editLocation(event) {
+  event.preventDefault();
+  let h1 = document.querySelector("h1");
+
+  let city = document.querySelector("#selector-city").value;
+  h1.innerHTML = city;
+  let apiUrl =
+    "https://api.openweather.org/data/2.5/weather?q=${city}&appid=6ed4b8240db798c9a2cc708c63ab3c0c&units=metric";
+
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function showCurrentPosition(event) {
+  event.preventDefault();
+
+  navigator.geolocation.getCurrentPosition(currentPosition);
+}
+
+let formSearch = document.querySelector("form");
+formSearch = document.addEventListener("submit", editLocation);
+
+console.log(days);
+let now = new Date();
+let h2 = document.querySelector("h2");
+let date = now.getDate();
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let year = now.getFullYear();
+let days = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+];
+let day = days[now.getDay()];
+
+         
+         
+ h1 {
+  color: #878787;
+  font-size: 25px;
+  font-weight: 100;
+  line-height: 28px;
+}
+
+.container {
+  display: block;
+  text-align: center;
+  background: white;
+}
+
+.card {
+  border: 1px solid #fff;
+  height: 500px;
+  width: 500px;
+  padding: 10px 40px 10px 10px;
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+
+.card-body {
+  font-family: Roboto;
+  display: block;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.weather-app {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+
+.weather-temp img {
+  margin-right: 10px;
+  float: left;
+  height: 66px;
+  width: 66px;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -33px;
+}
+       
+         
+
+ 
