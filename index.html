@@ -11,7 +11,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
     <a href="https://www.netlify.com"></a>
 
@@ -36,19 +36,31 @@
           <div class="row">
             <div class="col-5">
               <div class="clearfix weather-temp">
-          </div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="clear"
+                  class="float-left"
+          />
           <div class="float-left">
             <stron>84</stron>
             <span class="units">
                °F
             </span>
-                              
-              <input type="text" 
-                 placeholder="enter city here"
-                 id="selector-city"
-                class="form-control"/>
-           <div class="form">
-           <input type="submit" id="search" value="🔍" class="mag-glass" />
+                        
+            <form id ="search-form">
+            <div class ="row">
+            <div class ="col-9">
+            <input type ="search"
+             placeholder ="search your city here"
+             class= "form control"
+             />
+            </div>
+            <div class ="col-3">
+            <input type ="submit"
+             value="search"
+             class ="btn btn-primary w-100"
+             />
+
             </p>
             </div>
             <br />
@@ -94,9 +106,7 @@
                 >Weather code</a> by Michelle Griffith 
               </small>
               </div>
-            <script src="src/script.js"></script>
+            <script src="script.js"></script>
             </div>
 </body>
 </html>
-         
-  
