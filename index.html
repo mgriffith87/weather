@@ -25,28 +25,34 @@
               Pollock Pines
             </h1>
             <ul>
-            <li>
+            <li id="date">
               Thursday 12:00 
             </li>
-            <li>
+            <li id="description">
               Clear
              </li>
+             <li id="humidity">humidity</li>
+             <li id="wind">wind</li>
             </ul>
           </div>
           <div class="row">
             <div class="col-5">
-              <div class="clearfix weather-temp">
+              <div class="d-flex weather-temp">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                   alt="clear"
                   class="float-left"
+                  id="icon"
           />
           <div class="float-left">
-            <stron>84</stron>
+            <strong id="temperature">84</strong>
             <span class="units">
-               °F
-            </span>
-                        
+              <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+              </div>
+              </div>
+              </div>
+              <div class="col-7">
             <form id ="search-form">
             <div class ="row">
             <div class ="col-9">
@@ -60,9 +66,12 @@
              value="search"
              class ="btn btn-primary w-100"
              />
-
-            </p>
             </div>
+            </div>
+            </form>
+            </div>
+            </div>
+
             <br />
          <div class="row-2">
           <div class="day-one">
@@ -97,7 +106,6 @@
             Friday 82°F 
             🌞
             </div>
-           </div>
             <br/>
             <div>
               <small>
@@ -105,8 +113,10 @@
                 target="_blank"
                 >Weather code</a> by Michelle Griffith 
               </small>
-              </div>
-            <script src="script.js"></script>
             </div>
-</body>
+          </div>
+         </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
