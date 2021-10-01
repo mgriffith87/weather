@@ -21,7 +21,7 @@
      <div class="weather-app-wrapper">
        <div class="weather-app">
          <div class="overview">
-            <h1>
+            <h1 id="city">
               Pollock Pines
             </h1>
             <ul>
@@ -31,6 +31,8 @@
             <li id="description">
               Clear
              </li>
+             <li id="humidity">Humidity</li>
+             <li id="wind">Wind</li>
             </ul>
           </div>
           <div class="row">
@@ -46,6 +48,7 @@
             <strong id="temperature">84</strong>
             <span class="units">
               <a href="#" id="fahrenheit-link">°F</a>
+              <a href="#" id="celsius-link">°C</a>
               </span>
               </div>
               </div>
@@ -55,6 +58,7 @@
             <div class ="row">
             <div class ="col-9">
             <input type ="search"
+            id="selector-city"
              place holder="search your city here"
              class= "form control"
              />
