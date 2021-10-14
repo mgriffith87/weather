@@ -3,13 +3,13 @@ function formatDate(timestamp) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let days = [
-    "sunday",
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday",
-    "friday",
-    "saturday",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
   let day = days[date.getDay()];
 
@@ -30,7 +30,7 @@ function showTemperature(response) {
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = formatDate(response.data.dt * 1000);
+  windElement.innerHTML = response.data.main.humidity;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -72,16 +72,14 @@ function handleSubmit(event) {
   let h1 = document.querySelector("h1");
 
   let city = document.querySelector("#selector-city").value;
-  h1.innerHTML = city;
+  h1.innerHTML = "${city}";
 
   search(city);
 }
 
 function search(city) {
   let apiKey = "6ed4b8240db798c9a2cc708c63ab3c0c&units=metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(showTemperature);
+  search(cityInputElement.placeholder);
 }
 
 function currentPosition(position) {
