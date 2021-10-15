@@ -5,6 +5,12 @@ h1 {
   line-height: 28px;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   display: block;
   text-align: center;
