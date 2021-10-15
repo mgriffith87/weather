@@ -30,7 +30,7 @@ function showTemperature(response) {
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = response.data.main.wind;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
