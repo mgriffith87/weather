@@ -80,16 +80,9 @@ function handleSubmit(event) {
 function search(city) {
   let apiKey = "6ed4b8240db798c9a2cc708c63ab3c0c&units=metric";
   let apiUrl =
-    "https://api.openweathermap,org/data/2.5/weather?q=${city}appid=${apiKey}&units=metric";
+    "https://api.openweathermap.org/data/2.5/weather?q=${city}appid=${apiKey}&units=metric";
 
   search(cityInputElement.placeholder);
-
-  axios.get(apiUrl).then(showTemperature);
-}
-
-function currentPosition(position) {
-  let apiKey = "6ed4b8240db798c9a2cc708c63ab3c0c&units=metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemperature);
 }
