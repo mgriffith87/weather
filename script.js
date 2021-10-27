@@ -72,7 +72,7 @@ function handleSubmit(event) {
   let h1 = document.querySelector("h1");
 
   let city = document.querySelector("#selector-city").value;
-  h1.innerHTML = "${city}";
+  h1.innerHTML = city;
 
   search(city);
 }
