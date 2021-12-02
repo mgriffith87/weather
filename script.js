@@ -19,7 +19,6 @@ let dateElement = document.querySelector("#date");
 dateElement.innerHTML = formatDate(new Date());
 
 function showTemperature(response) {
-  celsiusTemperature = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
